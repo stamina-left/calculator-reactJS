@@ -23,7 +23,7 @@ it("renders an entry pads", () => {
     entryPads.forEach(entryPad => {
         act(() => {
             render(<Calculator entryPad={entryPad} />, container);
-});
+        });
         expect(container.textContent).toBe(`${entryPad}`);
     });
 });
