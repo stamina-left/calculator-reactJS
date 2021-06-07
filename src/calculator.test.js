@@ -20,4 +20,10 @@ it("renders an entry pads", () => {
     const entryPads = numberEntryPads
         .concat(operationEntryPads, helperEntryPads);
     
+    entryPads.forEach(entryPad => {
+        act(() => {
+            render(<Calculator entryPad={entryPad} />, container);
+});
+        expect(container.textContent).toBe(`${entryPad}`);
+    });
 });
