@@ -11,3 +11,6 @@ beforeEach(() => {
     // container *harus* melekat pada document agar events bekerja dengan benar
     document.body.appendChild(container);
 });
+
+it("renders an entry pads", () => {
+});
