@@ -13,4 +13,7 @@ beforeEach(() => {
 });
 
 it("renders an entry pads", () => {
+    const numberEntryPads = Array.from(Array(10).keys());
+    const operationEntryPads = ["+", "-", "/", "="];
+    const helperEntryPads = ["C", "AC"];
 });
