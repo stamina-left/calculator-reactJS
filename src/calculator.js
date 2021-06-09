@@ -24,6 +24,15 @@ export default function Calculator() {
         <div id="entry-pads">{ entryPads }</div>
         </div>
     );
+
+    function handleClick(value) {
+        currentInput === 0 ? 
+            setCurrentInput(value) : 
+            setCurrentInput(parseInt(
+                (currentInput.toString() + value.toString())
+                .toString().slice(0, 8)
+            ));
+    }
 }
 
 function EntryPad(props) {
