@@ -22,7 +22,7 @@ result of the last operation.
 -   [x] User can see an entry pad containing buttons for the digits 0-9, 
 operations - '+', '-', '/', and '=', a 'C' button (for clear), and an 'AC'
 button (for clear all).
--   [ ] User can enter numbers as sequences up to 8 digits long by clicking on
+-   [x] User can enter numbers as sequences up to 8 digits long by clicking on
 digits in the entry pad. Entry of any digits more than 8 will be ignored.
 -   [ ] User can click on an operation button to display the result of that
 operation on:
