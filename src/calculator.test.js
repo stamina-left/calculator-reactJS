@@ -13,7 +13,7 @@ describe("Renders a calculator with entry pads", () => {
     const entryPadsKey = numberKeys
         .concat(operationKeys, helperKeys);
 
-    it.each(entryPadsKey)(`Check if it renders a %s entry pad.`, 
+    test.each(entryPadsKey)(`Check if it renders a %s entry pad.`, 
     (entryPad) => {
         render(<Calculator />);
         const entryPadElement = screen.getByRole('button', 
