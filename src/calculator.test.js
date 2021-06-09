@@ -5,21 +5,6 @@ import Calculator from './calculator';
 
 const numberKeys = Array.from(Array(10).keys());
 
-test("User can enter numbers up to 8 digits", () => {
-    
-    render(<Calculator />);
-    const calculatorDisplay = screen
-        .getByTestId('calculator-display');
-    expect(calculatorDisplay.textContent).toBe('0');
-    
-    numberKeys.forEach((number) => {
-        const numberButton = screen.getByRole('button', {name: number});
-        fireEvent.click(numberButton);
-    });
-
-    expect(calculatorDisplay.textContent).toBe('12345678');
-});
-
 describe("Renders a calculator with entry pads", () => {
     const operationKeys = ["+", "-", "/", "="];
     const helperKeys = ["C", "AC"];
@@ -34,4 +19,19 @@ describe("Renders a calculator with entry pads", () => {
         {name: entryPad});
         expect(entryPadElement).toBeInTheDocument();
     });
+});
+
+test("User can enter numbers up to 8 digits", () => {
+    
+    render(<Calculator />);
+    const calculatorDisplay = screen
+        .getByTestId('calculator-display');
+    expect(calculatorDisplay.textContent).toBe('0');
+    
+    numberKeys.forEach((number) => {
+        const numberButton = screen.getByRole('button', {name: number});
+        fireEvent.click(numberButton);
+    });
+
+    expect(calculatorDisplay.textContent).toBe('12345678');
 });
