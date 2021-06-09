@@ -21,7 +21,7 @@ export default function Calculator() {
     return (
         <div>
             <Display currentInput={currentInput} />
-        <div id="entry-pads">{ entryPads }</div>
+            <div id="entry-pads">{ entryPads }</div>
         </div>
     );
 
@@ -37,7 +37,10 @@ export default function Calculator() {
 
 function EntryPad(props) {
     return (
-        <button name={ props.entryPadKey }>
+        <button 
+            name={ props.entryPadKey } 
+            onClick={() => props.onClick() }
+        >
             { props.entryPadKey }
         </button>
     );
