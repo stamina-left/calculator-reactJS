@@ -15,7 +15,7 @@ describe("Renders a calculator with entry pads", () => {
 
     it.each(entryPadsKey)(`Check if it renders a %s entry pad.`, 
     (entryPad) => {
-        render(<Calculator keys={entryPadsKey} />);
+        render(<Calculator />);
         const entryPadElement = screen.getByRole('button', 
         {name: entryPad});
         expect(entryPadElement).toBeInTheDocument();
