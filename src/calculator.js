@@ -1,9 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-export default function Calculator(props) {
-    const keys = props.keys;
-    const entryPads = keys.map((key) => 
-        <EntryPad key={key} entryPadKey={key} />
+const numberKeys = Array.from(Array(10).keys());
+const operationKeys = ["+", "-", "/", "="];
+const helperKeys = ["C", "AC"];
+
+export default function Calculator() {
+
+    const [currentInput, setCurrentInput] = useState(0);
+
+    const entryPadsKey = numberKeys
+        .concat(operationKeys, helperKeys);
+    
+    const entryPads = entryPadsKey.map((key) => 
+        <EntryPad 
+            key={key} 
+            entryPadKey={key} 
+            onClick={() => handleClick(key)} 
+        />
     );
     return (
         <div id="entry-pads">{ entryPads }</div>
