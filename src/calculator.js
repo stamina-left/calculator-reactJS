@@ -19,7 +19,10 @@ export default function Calculator() {
         />
     );
     return (
+        <div>
+            <Display currentInput={currentInput} />
         <div id="entry-pads">{ entryPads }</div>
+        </div>
     );
 }
 
