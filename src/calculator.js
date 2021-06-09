@@ -30,3 +30,11 @@ function EntryPad(props) {
         </button>
     );
 }
+
+function Display(props) {
+    return (
+        <h1 data-testid="calculator-display">
+            { props.currentInput }
+        </h1>
+    );
+}
