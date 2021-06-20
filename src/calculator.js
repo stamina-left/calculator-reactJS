@@ -74,6 +74,9 @@ export default function Calculator() {
     }
 
     function inputClear() {
+        if (operator) {
+            setWaitingForOperand(false);
+            setOperator(null);
     }
 }
 
