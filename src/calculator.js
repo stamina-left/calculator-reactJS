@@ -47,6 +47,8 @@ export default function Calculator() {
             setDisplayValue(displayValue === '0' ? digit : stringResult);
         }
     }
+
+    function performOperation(nextOperator) {
     }
 }
 
