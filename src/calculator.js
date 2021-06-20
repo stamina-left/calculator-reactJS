@@ -39,8 +39,11 @@ export default function Calculator() {
     );
     return (
         <div>
-            <Display currentInput={currentInput} />
-            <div id="entry-pads">{ entryPads }</div>
+            <CalculatorDisplay currentInput={displayValue} />
+            <div id="entry-pads">
+                { numberEntryPads }
+                { entryPads }
+            </div>
         </div>
     );
 
