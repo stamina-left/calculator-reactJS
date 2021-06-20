@@ -51,6 +51,12 @@ test("User can click on operations and show results", () => {
 
     clickButton('-');
     expect(calculatorDisplay.textContent).toBe('35');
+
+    [3, 4].map(clickButton);
+    expect(calculatorDisplay.textContent).toBe('34');
+
+    clickButton('*');
+    expect(calculatorDisplay.textContent).toBe('1');
 });
 
 function clickButton(value) {
