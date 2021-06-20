@@ -22,7 +22,7 @@ export default function Calculator() {
     const merged = operations
         .concat(helpers);
 
-    const numberEntryPads = numberKeys.map((key) => 
+    const numberKeys = numbers.map((key) => 
         <CalculatorKey 
             key={key}
             entryPadKey={key}
