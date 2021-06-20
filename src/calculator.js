@@ -4,6 +4,14 @@ const numberKeys = Array.from(Array(10).keys());
 const operationKeys = ["+", "-", "/", "="];
 const helperKeys = ["C", "AC"];
 
+const CalculatorOperations = {
+    '+': (previousValue, nextValue) => previousValue + nextValue,
+    '-': (previousValue, nextValue) => previousValue - nextValue,
+    '*': (previousValue, nextValue) => previousValue * nextValue,
+    '/': (previousValue, nextValue) => previousValue / nextValue,
+    '=': (previousValue, nextValue) => nextValue,
+};
+
 export default function Calculator() {
 
     const [currentInput, setCurrentInput] = useState(0);
