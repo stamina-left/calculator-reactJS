@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
-const numberKeys = Array.from(Array(10).keys()).map(String);
-const operationKeys = ["+", "-", "*", "/", "="];
-const helperKeys = ["C", "AC"];
+const numbers = Array.from(Array(10).keys()).map(String);
+const operations = ["+", "-", "*", "/", "="];
+const helpers = ["C", "AC"];
 
 const CalculatorOperations = {
     '+': (previousValue, nextValue) => previousValue + nextValue,
