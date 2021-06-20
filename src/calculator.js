@@ -25,7 +25,7 @@ export default function Calculator() {
     const numberKeys = numbers.map((key) => 
         <CalculatorKey 
             key={key}
-            entryPadKey={key}
+            keyValue={key}
             onClick={() => inputDigit(key)}
         />
     );
@@ -33,7 +33,7 @@ export default function Calculator() {
     const operationKeys = operations.map(key => 
         <CalculatorKey 
             key={key} 
-            entryPadKey={key} 
+            keyValue={key} 
             onClick={() => performOperation(key)} 
         />
     );
@@ -86,10 +86,10 @@ export default function Calculator() {
 function CalculatorKey(props) {
     return (
         <button 
-            name={ props.entryPadKey } 
+            name={ props.keyValue } 
             onClick={() => props.onClick() }
         >
-            { props.entryPadKey }
+            { props.keyValue }
         </button>
     );
 }
