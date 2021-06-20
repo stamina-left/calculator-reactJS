@@ -88,6 +88,9 @@ test("User can click on C and clear the latest input or operation", () => {
     clickButton('*');
     clickButton('C');
     clickButton('/');
+
+    [2, 5].map(clickButton);
+    expect(calculatorDisplay.textContent).toBe('25');
 });
 
 function clickButton(value) {
