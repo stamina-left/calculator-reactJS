@@ -60,6 +60,8 @@ export default function Calculator() {
             setDisplayValue(String(newValue));
             setValue(newValue);
         }
+        setWaitingForOperand(true);
+        setOperator(nextOperator);
     }
 }
 
