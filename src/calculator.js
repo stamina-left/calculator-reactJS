@@ -39,7 +39,7 @@ export default function Calculator() {
         <CalculatorKey 
             key={key} 
             keyValue={key} 
-            onClick={() => inputClear()} 
+            onClick={() => key === 'C' ? inputClear() : inputAllClear()} 
         />
     );
 
