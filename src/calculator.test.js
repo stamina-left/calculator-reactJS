@@ -35,6 +35,16 @@ test("User can enter numbers up to 8 digits", () => {
     });
 
 test("User can click on operations and show results", () => {
+
+    render(<Calculator />);
+    const calculatorDisplay = screen
+        .getByTestId('calculator-display');
+    expect(calculatorDisplay.textContent).toBe('0');
+
+    [2, 3].map(clickButton);
+    expect(calculatorDisplay.textContent).toBe('23');
+
+    clickButton('+');
 });
 
 function clickButton(value) {
