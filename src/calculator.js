@@ -48,7 +48,7 @@ export default function Calculator() {
     }
 }
 
-function EntryPad(props) {
+function CalculatorKey(props) {
     return (
         <button 
             name={ props.entryPadKey } 
@@ -59,7 +59,7 @@ function EntryPad(props) {
     );
 }
 
-function Display(props) {
+function CalculatorDisplay(props) {
     return (
         <h1 data-testid="calculator-display">
             { props.currentInput }
