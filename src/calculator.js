@@ -19,8 +19,8 @@ export default function Calculator() {
     const [value, setValue] = useState(null);
     const [waitingForOperand, setWaitingForOperand] = useState(false);
 
-    const entryPadsKey = operationKeys
-        .concat(helperKeys);
+    const merged = operations
+        .concat(helpers);
 
     const numberEntryPads = numberKeys.map((key) => 
         <CalculatorKey 
