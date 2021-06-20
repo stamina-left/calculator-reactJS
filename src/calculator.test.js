@@ -70,7 +70,7 @@ test("User can click on operations and show results", () => {
     expect(calculatorDisplay.textContent).toBe('2');
 });
 
-test("User can click on C and clear the latest input or operation", () => {
+test("User clicks C and clear the latest input or operation", () => {
 
     render(<Calculator />);
     const calculatorDisplay = screen.getByTestId('calculator-display');
