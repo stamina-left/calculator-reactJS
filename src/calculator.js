@@ -49,6 +49,7 @@ export default function Calculator() {
     }
 
     function performOperation(nextOperator) {
+        const inputValue = parseInt(displayValue);
     }
 }
 
