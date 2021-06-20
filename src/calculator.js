@@ -90,6 +90,10 @@ export default function Calculator() {
     }
 
     function inputAllClear() {
+        setDisplayValue('0');
+        setOperator(null);
+        setValue(null);
+        setWaitingForOperand(false);
     }
 }
 
