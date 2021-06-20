@@ -19,8 +19,8 @@ export default function Calculator() {
     const [value, setValue] = useState(null);
     const [waitingForOperand, setWaitingForOperand] = useState(false);
 
-    const entryPadsKey = numberKeys
-        .concat(operationKeys, helperKeys);
+    const entryPadsKey = operationKeys
+        .concat(helperKeys);
     
     const entryPads = entryPadsKey.map((key) => 
         <EntryPad 
@@ -36,13 +36,15 @@ export default function Calculator() {
         </div>
     );
 
-    function handleClick(value) {
-        currentInput === 0 ? 
-            setCurrentInput(value) : 
-            setCurrentInput(parseInt(
-                (currentInput.toString() + value.toString())
-                .toString().slice(0, 8)
-            ));
+    function inputDigit(digit) {
+        if (waitingForOperand){
+            setDisplayValue(digit);
+            setWaitingForOperand(false);
+        } else {
+            const stringResult = (displayValue + digit).slice(0, 8);
+            setDisplayValue(displayValue === '0' ? digit : stringResult);
+        }
+    }
     }
 }
 
