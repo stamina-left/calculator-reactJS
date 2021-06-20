@@ -75,6 +75,9 @@ test("User can click on C and clear the latest input or operation", () => {
     render(<Calculator />);
     const calculatorDisplay = screen.getByTestId('calculator-display');
     expect(calculatorDisplay.textContent).toBe('0');
+
+    [5, 9, 0].map(clickButton);
+    expect(calculatorDisplay.textContent).toBe('590');
 });
 
 function clickButton(value) {
