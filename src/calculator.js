@@ -50,6 +50,9 @@ export default function Calculator() {
 
     function performOperation(nextOperator) {
         const inputValue = parseInt(displayValue);
+
+        if (value === null) {
+            setValue(inputValue);
     }
 }
 
