@@ -101,6 +101,9 @@ test("User clicks AC to clear all inputs both numbers nor operations", () => {
     render(<Calculator />);
     const calculatorDisplay = screen.getByTestId('calculator-display');
     expect(calculatorDisplay.textContent).toBe('0');
+
+    [4, 4].map(clickButton);
+    expect(calculatorDisplay.textContent).toBe('44');
 });
 
 function clickButton(value) {
