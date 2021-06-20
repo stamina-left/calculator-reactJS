@@ -37,6 +37,15 @@ export default function Calculator() {
             onClick={() => performOperation(key)} 
         />
     );
+
+    const helperKeys = helpers.map(key => 
+        <CalculatorKey 
+            key={key} 
+            keyValue={key} 
+            onClick={() => inputClear()} 
+        />
+    );
+
     return (
         <div>
             <CalculatorDisplay currentInput={displayValue} />
