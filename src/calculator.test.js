@@ -63,6 +63,12 @@ test("User can click on operations and show results", () => {
 
     clickButton('/');
     expect(calculatorDisplay.textContent).toBe('10');
+
+    clickButton(5);
+    expect(calculatorDisplay.textContent).toBe('5');
+
+    clickButton('=');
+    expect(calculatorDisplay.textContent).toBe('2');
 });
 
 function clickButton(value) {
