@@ -7,7 +7,6 @@ const numberKeys = Array.from(Array(10).keys());
 const operationKeys = ["+", "-", "/", "="];
 
 describe("Renders a calculator with entry pads", () => {
-    const operationKeys = ["+", "-", "/", "="];
     const helperKeys = ["C", "AC"];
 
     const entryPadsKey = numberKeys
@@ -32,7 +31,7 @@ test("User can enter numbers up to 8 digits", () => {
     numberKeys.map(clickButton);
 
     expect(calculatorDisplay.textContent).toBe('12345678');
-    });
+});
 
 test("User can click on operations and show results", () => {
 
