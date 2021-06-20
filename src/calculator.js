@@ -88,6 +88,9 @@ export default function Calculator() {
             setDisplayValue('0');
         }
     }
+
+    function inputAllClear() {
+    }
 }
 
 function CalculatorKey(props) {
