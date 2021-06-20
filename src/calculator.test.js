@@ -29,9 +29,9 @@ test("User can enter numbers up to 8 digits", () => {
         .getByTestId('calculator-display');
     expect(calculatorDisplay.textContent).toBe('0');
     
-    numberKeys.forEach((number) => {
-        const numberButton = screen.getByRole('button', {name: number});
-        fireEvent.click(numberButton);
+    numberKeys.map(clickButton);
+
+    expect(calculatorDisplay.textContent).toBe('12345678');
     });
 
     expect(calculatorDisplay.textContent).toBe('12345678');
