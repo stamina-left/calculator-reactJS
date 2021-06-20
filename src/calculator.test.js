@@ -96,6 +96,9 @@ test("User clicks C and clear the latest input or operation", () => {
     expect(calculatorDisplay.textContent).toBe('2');
 });
 
+test("User clicks AC to clear all inputs both numbers nor operations", () => {
+});
+
 function clickButton(value) {
     const targetButton = screen.getByRole('button', {name: value});
     fireEvent.click(targetButton);
