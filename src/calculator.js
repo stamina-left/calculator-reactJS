@@ -29,6 +29,12 @@ export default function Calculator() {
             onClick={() => inputDigit(key)}
         />
     );
+    
+    const entryPads = entryPadsKey.map(key => 
+        <CalculatorKey 
+            key={key} 
+            entryPadKey={key} 
+            onClick={() => performOperation(key)} 
         />
     );
     return (
