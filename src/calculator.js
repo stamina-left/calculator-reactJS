@@ -72,6 +72,9 @@ export default function Calculator() {
         setWaitingForOperand(true);
         setOperator(nextOperator);
     }
+
+    function inputClear() {
+    }
 }
 
 function CalculatorKey(props) {
