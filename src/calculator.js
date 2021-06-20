@@ -15,6 +15,7 @@ const CalculatorOperations = {
 export default function Calculator() {
 
     const [displayValue, setDisplayValue] = useState('0');
+    const [operator, setOperator] = useState(null);
 
     const entryPadsKey = numberKeys
         .concat(operationKeys, helperKeys);
