@@ -19,9 +19,6 @@ export default function Calculator() {
     const [value, setValue] = useState(null);
     const [waitingForOperand, setWaitingForOperand] = useState(false);
 
-    const merged = operations
-        .concat(helpers);
-
     const numberKeys = numbers.map((key) => 
         <CalculatorKey 
             key={key}
