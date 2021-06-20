@@ -77,6 +77,9 @@ export default function Calculator() {
         if (operator) {
             setWaitingForOperand(false);
             setOperator(null);
+        } else if (displayValue !== 0) {
+            setDisplayValue('0');
+        }
     }
 }
 
