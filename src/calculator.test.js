@@ -34,7 +34,7 @@ test("User can enter numbers up to 8 digits", () => {
     expect(calculatorDisplay.textContent).toBe('12345678');
     });
 
-    expect(calculatorDisplay.textContent).toBe('12345678');
+test("User can click on operations and show results", () => {
 });
 
 function clickButton(value) {
