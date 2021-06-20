@@ -30,7 +30,7 @@ export default function Calculator() {
         />
     );
     
-    const entryPads = entryPadsKey.map(key => 
+    const otherKeys = merged.map(key => 
         <CalculatorKey 
             key={key} 
             entryPadKey={key} 
