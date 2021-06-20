@@ -97,6 +97,10 @@ test("User clicks C and clear the latest input or operation", () => {
 });
 
 test("User clicks AC to clear all inputs both numbers nor operations", () => {
+
+    render(<Calculator />);
+    const calculatorDisplay = screen.getByTestId('calculator-display');
+    expect(calculatorDisplay.textContent).toBe('0');
 });
 
 function clickButton(value) {
