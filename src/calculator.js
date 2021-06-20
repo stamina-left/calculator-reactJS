@@ -21,11 +21,11 @@ export default function Calculator() {
 
     const entryPadsKey = operationKeys
         .concat(helperKeys);
-    
+
     const numberEntryPads = numberKeys.map((key) => 
         <CalculatorKey 
-            key={key} 
-            entryPadKey={key} 
+            key={key}
+            entryPadKey={key}
             onClick={() => inputDigit(key)}
         />
     );
