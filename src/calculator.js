@@ -53,6 +53,13 @@ export default function Calculator() {
 
         if (value === null) {
             setValue(inputValue);
+        } else if (operator) {
+            const currentValue = value || 0;
+            const newValue = CalculatorOperations[operator](currentValue, inputValue);
+            
+            setDisplayValue(String(newValue));
+            setValue(newValue);
+        }
     }
 }
 
