@@ -41,8 +41,8 @@ export default function Calculator() {
         <div>
             <CalculatorDisplay currentInput={displayValue} />
             <div id="entry-pads">
-                { numberEntryPads }
-                { entryPads }
+                { numberKeys }
+                { otherKeys }
             </div>
         </div>
     );
