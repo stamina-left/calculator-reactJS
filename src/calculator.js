@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-const numberKeys = Array.from(Array(10).keys());
-const operationKeys = ["+", "-", "/", "="];
+const numberKeys = Array.from(Array(10).keys()).map(String);
 const helperKeys = ["C", "AC"];
 
 const CalculatorOperations = {
