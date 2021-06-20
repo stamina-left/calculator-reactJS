@@ -4,6 +4,7 @@ import '@testing-library/jest-dom';
 import Calculator from './calculator';
 
 const numberKeys = Array.from(Array(10).keys());
+const operationKeys = ["+", "-", "/", "="];
 
 describe("Renders a calculator with entry pads", () => {
     const operationKeys = ["+", "-", "/", "="];
