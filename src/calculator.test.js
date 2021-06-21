@@ -119,6 +119,9 @@ test("User can see 'ERR' displayed if the result is more than 8 digits", () => {
     render(<Calculator />);
     const calculatorDisplay = screen.getByTestId('calculator-display');
     expect(calculatorDisplay.textContent).toBe('0');
+
+    [1, 0, 0, 0, 0, 0, 0, 0].map(clickButton);
+    expect(calculatorDisplay.textContent).toBe('10000000');
 });
 
 function clickButton(value) {
