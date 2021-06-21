@@ -136,6 +136,9 @@ test("User can see 'ERR' displayed if the result is more than 8 digits", () => {
 
     clickButton('*');
     expect(calculatorDisplay.textContent).toBe('100');
+
+    [2, 0].map(clickButton);
+    expect(calculatorDisplay.textContent).toBe('20');
 });
 
 function clickButton(value) {
