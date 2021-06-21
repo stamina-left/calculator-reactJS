@@ -145,6 +145,10 @@ test("User can see 'ERR' displayed if the result is more than 8 digits", () => {
 });
 
 test("User clicks '+/-' button to change the sign of the current displayed number", () => {
+
+    render(<Calculator />);
+    const calculatorDisplay = screen.getByTestId('calculator-display');
+    expect(calculatorDisplay.textContent).toBe('0');
 });
 
 function clickButton(value) {
