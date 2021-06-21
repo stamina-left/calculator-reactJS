@@ -3,21 +3,21 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import Calculator from './calculator';
 
-const numberKeys = Array.from(Array(10).keys());
-const operationKeys = ["+", "-", "/", "="];
+const numbers = Array.from(Array(10).keys());
+const operations = ["+", "-", "/", "="];
 
 describe("Renders a calculator with entry pads", () => {
-    const helperKeys = ["C", "AC"];
+    const helpers = ["C", "AC"];
 
-    const entryPadsKey = numberKeys
-        .concat(operationKeys, helperKeys);
+    const merged = numbers
+        .concat(operations, helpers);
 
-    test.each(entryPadsKey)(`Check if it renders a %s entry pad.`, 
-    (entryPad) => {
+    test.each(merged)(`Check if it renders a %s entry pad.`, 
+    (value) => {
         render(<Calculator />);
-        const entryPadElement = screen.getByRole('button', 
-        {name: entryPad});
-        expect(entryPadElement).toBeInTheDocument();
+        const calculatorKey = screen.getByRole('button', 
+        {name: value});
+        expect(calculatorKey).toBeInTheDocument();
     });
 });
 
@@ -28,7 +28,7 @@ test("User can enter numbers up to 8 digits", () => {
         .getByTestId('calculator-display');
     expect(calculatorDisplay.textContent).toBe('0');
     
-    numberKeys.map(clickButton);
+    numbers.map(clickButton);
 
     expect(calculatorDisplay.textContent).toBe('12345678');
 });
