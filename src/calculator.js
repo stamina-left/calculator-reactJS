@@ -73,7 +73,7 @@ export default function Calculator() {
             const currentValue = value || 0;
             const newValue = CalculatorOperations[operator](currentValue, inputValue);
             
-            setDisplayValue(String(newValue));
+            setDisplayValue(String(newValue).length > 8 ? 'ERR' : String(newValue));
             setValue(newValue);
         }
         setWaitingForOperand(true);
