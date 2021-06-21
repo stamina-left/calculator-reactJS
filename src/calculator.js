@@ -50,6 +50,7 @@ export default function Calculator() {
                 { numberKeys }
                 { operationKeys }
                 { helperKeys }
+                <CalculatorKey key='+/-' keyValue='+/-' onClick={() => toggleSign()}/>
             </div>
         </div>
     );
