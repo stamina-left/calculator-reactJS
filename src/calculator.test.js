@@ -149,6 +149,9 @@ test("User clicks '+/-' button to change the sign of the current displayed numbe
     render(<Calculator />);
     const calculatorDisplay = screen.getByTestId('calculator-display');
     expect(calculatorDisplay.textContent).toBe('0');
+
+    [5, 0].map(clickButton);
+    expect(calculatorDisplay.textContent).toBe('50');
 });
 
 function clickButton(value) {
