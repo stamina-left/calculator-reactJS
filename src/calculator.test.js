@@ -155,6 +155,11 @@ test("User clicks '+/-' button to change the sign of the current displayed numbe
 
     clickButton('+/-');
     expect(calculatorDisplay.textContent).toBe('-50');
+
+    clickButton('*');
+
+    [5, 0, 0].map(clickButton);
+    expect(calculatorDisplay.textContent).toBe('500');
 });
 
 function clickButton(value) {
