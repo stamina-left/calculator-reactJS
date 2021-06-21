@@ -85,6 +85,11 @@ export default function Calculator() {
         setOperator(nextOperator);
     }
 
+    function toggleSign() {
+        const newValue = parseInt(displayValue) * -1;
+        setDisplayValue(newValue);
+    }
+
     function inputClear() {
         if (operator) {
             setWaitingForOperand(false);
