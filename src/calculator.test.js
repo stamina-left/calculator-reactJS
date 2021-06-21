@@ -114,6 +114,9 @@ test("User clicks AC to clear all inputs both numbers nor operations", () => {
     expect(calculatorDisplay.textContent).toBe('0');
 });
 
+test("User can see 'ERR' displayed if the result is more than 8 digits", () => {
+});
+
 function clickButton(value) {
     const targetButton = screen.getByRole('button', {name: value});
     fireEvent.click(targetButton);
