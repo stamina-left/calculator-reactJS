@@ -55,7 +55,12 @@ export default function Calculator() {
     );
 
     function inputDigit(digit) {
-        if (waitingForOperand){
+        if (displayValue === 'ERR') {
+            setDisplayValue(digit);
+            setOperator(null);
+            setValue(null);
+            setWaitingForOperand(false);
+        } else if (waitingForOperand){
             setDisplayValue(digit);
             setWaitingForOperand(false);
         } else {
