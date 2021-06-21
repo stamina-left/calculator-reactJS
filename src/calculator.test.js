@@ -115,6 +115,10 @@ test("User clicks AC to clear all inputs both numbers nor operations", () => {
 });
 
 test("User can see 'ERR' displayed if the result is more than 8 digits", () => {
+
+    render(<Calculator />);
+    const calculatorDisplay = screen.getByTestId('calculator-display');
+    expect(calculatorDisplay.textContent).toBe('0');
 });
 
 function clickButton(value) {
