@@ -51,6 +51,7 @@ export default function Calculator() {
                 { operationKeys }
                 { helperKeys }
                 <CalculatorKey key='+/-' keyValue='+/-' onClick={() => toggleSign()}/>
+                <CalculatorKey key='.' keyValue='.' onClick={() => inputDot()} />
             </div>
         </div>
     );
