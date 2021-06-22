@@ -176,6 +176,9 @@ test("User can enter a floating numbers by clicking '.' button", () => {
 
     ['*', 0, '.', 5].map(clickButton);
     expect(calculatorDisplay.textContent).toBe('0.5');
+
+    clickButton('=');
+    expect(calculatorDisplay.textContent).toBe('25.25');
 });
 
 function clickButton(value) {
