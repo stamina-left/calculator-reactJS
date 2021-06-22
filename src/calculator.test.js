@@ -166,6 +166,10 @@ test("User clicks '+/-' button to change the sign of the current displayed numbe
 });
 
 test("User can enter a floating numbers by clicking '.' button", () => {
+
+    render(<Calculator />);
+    const calculatorDisplay = screen.getByTestId('calculator-display');
+    expect(calculatorDisplay.textContent).toBe('0');
 });
 
 function clickButton(value) {
