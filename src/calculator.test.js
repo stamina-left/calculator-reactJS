@@ -165,6 +165,9 @@ test("User clicks '+/-' button to change the sign of the current displayed numbe
     expect(calculatorDisplay.textContent).toBe('-25000');
 });
 
+test("User can enter a floating numbers by clicking '.' button", () => {
+});
+
 function clickButton(value) {
     const targetButton = screen.getByRole('button', {name: value});
     fireEvent.click(targetButton);
