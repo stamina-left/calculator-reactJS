@@ -91,6 +91,12 @@ export default function Calculator() {
         setDisplayValue(newValue);
     }
 
+    function inputDot() {
+        if (!(/\./).test(displayValue)) {
+            setDisplayValue(displayValue + '.');
+        }
+    }
+
     function inputClear() {
         if (operator) {
             setWaitingForOperand(false);
