@@ -71,7 +71,7 @@ export default function Calculator() {
     }
 
     function performOperation(nextOperator) {
-        const inputValue = parseInt(displayValue);
+        const inputValue = parseFloat(displayValue);
 
         if (value === null) {
             setValue(inputValue);
@@ -87,7 +87,7 @@ export default function Calculator() {
     }
 
     function toggleSign() {
-        const newValue = parseInt(displayValue) * -1;
+        const newValue = parseFloat(displayValue) * -1;
         setDisplayValue(newValue);
     }
 
